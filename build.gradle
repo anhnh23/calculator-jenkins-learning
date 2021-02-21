@@ -1,9 +1,10 @@
 plugins {
     id 'org.springframework.boot' version '2.4.3'
-    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id 'checkstyle'
 }
 
+apply plugin: 'java'
 apply plugin: "jacoco"
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'checkstyle'
@@ -33,8 +34,4 @@ jacocoTestCoverageVerification {
             }
         }
     }
-}
-
-checkstyle {
-    checkstyleTest.enabled = false
 }
